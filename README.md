@@ -1,195 +1,147 @@
-# FIS 25-26: Pricing-Driven Self-Adaptation Experiment
+# Autoadaptación Dirigida por Planes de Precios (Pricing-Driven Self-Adaptation)
 
-## Overview
+## 📚 Índice
 
-This repository contains the experimental setup for studying **Pricing-Driven Self-Adaptation** using the SPACE (Self-adaPtive Application based on Cost Estimation) technology. This experiment is designed for students to explore how software systems can automatically adapt their behavior based on pricing models and cost estimations.
+1. [🧭 ¿Por qué existe este repositorio?](#-por-qu%C3%A9-existe-este-repositorio)
+    
+2. [🎯 Competencias que adquirirás](#-competencias-que-adquir%C3%A1s)
+    
+3. [🚀 ¿Dónde está la dificultad?](#-d%C3%B3nde-est%C3%A1-la-dificultad)
+    
+4. [🔧 ¿Cómo lo abordamos?](#-c%C3%B3mo-lo-abordamos)
+    
+    - [🧩 1. Modelar el pricing como artefacto ejecutable](#-1-modelar-el-pricing-como-artefacto-ejecutable)
+        
+    - [🏗️ 2. Diseñar una arquitectura que haga cumplir el iPricing en tiempo real](#%25EF%25B8%258F-2-dise%C3%B1ar-una-arquitectura-que-haga-cumplir-el-ipricing-en-tiempo-real)
+        
+5. [✅ Criterios de éxito del alumno](#-criterios-de-%C3%A9xito-del-alumno)
+    
+6. [🧭 ¿Qué solución proponemos?](#-qu%C3%A9-soluci%C3%B3n-proponemos)
 
-## What is Pricing-Driven Self-Adaptation?
 
-Pricing-Driven Self-Adaptation is a novel approach to self-adaptive systems where adaptation decisions are influenced by pricing models and cost considerations. Instead of relying solely on technical metrics (like response time or throughput), the system considers the economic impact of different configuration choices.
+## 🧭 ¿Por qué existe este repositorio?
 
-### Key Concepts
+El desarrollo de aplicaciones _Cloud-Native_ (CNA) ya no consiste solo en desplegar funcionalidades. En el mercado actual, el éxito de una aplicación depende de su **capacidad para adaptarse automáticamente a las necesidades del negocio y a la competencia**.
 
-- **Self-Adaptation**: The ability of a system to automatically modify its behavior in response to changes in its environment or internal state
-- **Pricing Models**: Economic frameworks that assign costs to different system configurations and resource usage patterns
-- **Cost Estimation**: The process of predicting the financial impact of adaptation decisions
-- **SPACE Technology**: Our Self-adaPtive Application framework that integrates cost estimation into the adaptation loop
+Estas necesidades se expresan, principalmente, mediante su **estructura de precios (pricing)**, que define:
 
-## Objectives
+- Qué características se ofrecen
+    
+- En qué planes o configuraciones
+    
+- Con qué límites de uso
+    
+- A qué precio y bajo qué condiciones  
 
-The main objectives of this experiment are to:
+Los _pricings_ se han convertido en un elemento central del negocio digital. Estudios recientes demuestran no solo que el número de configuraciones posibles en aplicaciones SaaS ha crecido **más de un 200% en los últimos años**, impulsado principalmente por el aumento de _add-ons_; sino que además los _pricings_ son altamente **volátiles**, es decir, cambian con frecuencia para adaptarse al mercado y a la competencia. Esta combinación de complejidad y volatilidad ha generado un problema real en la industria:
 
-1. **Understand Self-Adaptive Systems**: Learn the fundamental concepts of self-adaptation, including monitoring, analysis, planning, and execution (MAPE-K loop)
+> [!WARNING]
+> **Los sistemas actuales no pueden adaptarse automáticamente cuando cambia el pricing.** Cada modificación debe implementarse manualmente por los desarrolladores, generando una de los peores tipos de deuda técnica, que provoca: despliegues lentos, errores recurrentes y pérdida directa de competitividad.
 
-2. **Explore Pricing Models**: Investigate how different pricing strategies affect system behavior and adaptation decisions
+Este repositorio ha sido creado para enseñarte, como futuro ingeniero/a, a **transformar un pricing de una tabla comercial estática a un artefacto capaz de controlar automáticamente el comportamiento de una aplicación cloud-native**. Es decir, aprenderás a usar el pricing como **motor de autoadaptación en tiempo real**, capaz de dirigir el desarrollo, la operación y la evolución del sistema sin intervención manual.
 
-3. **Evaluate Cost-Benefit Trade-offs**: Analyze how systems balance functional requirements with economic constraints
+A esta nueva forma de construir software la llamamos: **Pricing-Driven Self-Adaptation**.
 
-4. **Hands-on Experience with SPACE**: Gain practical experience implementing and configuring self-adaptive applications using our SPACE technology
 
-5. **Experimental Analysis**: Design and conduct experiments to measure the effectiveness of pricing-driven adaptation strategies
+## 🎯 Competencias que adquirirás
 
-## SPACE Technology
+Al implementar este paradigma en vuestro proyecto, desarrollaréis las siguientes habilidades clave:
 
-SPACE (Self-adaPtive Application based on Cost Estimation) is our framework for building self-adaptive systems that consider economic factors in their adaptation decisions.
+| **Competencia**                                        | **Descripción**                                                                                                                       |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
+| **Definir planes de precios como artefactos software** | Diseñar, representar y validar un pricing real utilizando la tecnología de SPHERE.                                                    |
+| **Autoadaptación dirigida por planes de precios**      | Instrumentar una aplicación cloud-native para que adapte dinámicamente sus funcionalidades utilizando SPACE como motor de evaluación. |
 
-### Architecture
 
-SPACE follows the MAPE-K (Monitor, Analyze, Plan, Execute, Knowledge) reference model:
+## 🚀 ¿Dónde está la dificultad?
 
-```
-┌─────────────────────────────────────────┐
-│            Knowledge Base               │
-│  (Pricing Models, System Configuration) │
-└─────────────────────────────────────────┘
-         ▲                         ▲
-         │                         │
-    ┌────┴────┐               ┌───┴────┐
-    │ Monitor │──────────────▶│ Analyze │
-    └─────────┘               └────┬────┘
-         ▲                         │
-         │                         ▼
-    ┌────┴────┐               ┌────────┐
-    │ Execute │◀──────────────│  Plan  │
-    └─────────┘               └────────┘
-         │
-         ▼
-   ┌──────────┐
-   │  System  │
-   └──────────┘
-```
+En una CNA típica, los planes de precios afectan directamente al comportamiento del sistema: qué funcionalidades tiene cada usuario, cuántas veces puede utilizarlas, qué garantías recibe, etc. Sin embargo, cuando el pricing cambia, **los ingenieros deben modificar manualmente el código, el despliegue, la infraestructura y las políticas de acceso**.
 
-### Key Features
+Según el análisis de más de 240 aplicaciones SaaS de distintos sectores (GitHub, Zoom, Salesforce, etc.):
 
-- **Dynamic Pricing Integration**: Supports multiple pricing models (pay-per-use, tiered pricing, spot pricing)
-- **Cost-Aware Planning**: Adaptation decisions consider both functional and economic objectives
-- **SPHERE Integration**: Works seamlessly with SPHERE (Self-adaPtive arcHitecture based on Economic-driven Reconfiguration Engine)
-- **Real-time Monitoring**: Continuous tracking of system performance and costs
-- **Extensible Framework**: Easy to add new pricing models and adaptation strategies
+- El número medio de _features_ por pricing ha aumentado un **98% desde 2019**
+    
+- El número de _add-ons_ ha crecido **más del 200%**, lo que provoca un incremento exponencial de configuraciones posibles
+    
+- **Ninguna herramienta industrial** actual soporta completamente la autoadaptación basada en _pricing_  
 
-### Getting Started with SPACE
+⚡ Esto convierte al _pricing-driven self-adaptation_ en un reto técnico real, de frontera y altamente relevante para la ingeniería de software del presente y del futuro.
 
-#### Prerequisites
 
-- Java 11 or higher
-- Maven 3.6+
-- Basic understanding of self-adaptive systems
-- Familiarity with REST APIs
+## 🔧 ¿Cómo lo abordamos?
 
-#### Installation
-
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/Alex-GF/fis-25-26.git
-   cd fis-25-26
-   ```
-
-2. Build the project (when available):
-   ```bash
-   mvn clean install
-   ```
-
-3. Configure your pricing model in `config/pricing-model.yaml`
-
-4. Run the SPACE application:
-   ```bash
-   java -jar target/space-application.jar
-   ```
-
-#### Basic Usage
-
-1. **Define Your Pricing Model**: Create a pricing configuration file that specifies costs for different resources and operations
-
-2. **Configure Adaptation Rules**: Set up rules that define when and how the system should adapt based on cost thresholds
-
-3. **Monitor System Behavior**: Use the built-in dashboard to observe adaptation decisions and their economic impact
-
-4. **Analyze Results**: Export monitoring data for analysis and experimentation
-
-#### Example Configuration
-
-```yaml
-pricing:
-  model: pay-per-use
-  resources:
-    cpu:
-      cost_per_hour: 0.05
-    memory:
-      cost_per_gb_hour: 0.01
-    storage:
-      cost_per_gb_month: 0.10
   
-adaptation:
-  cost_threshold: 10.0
-  optimization_objective: minimize_cost
-  constraints:
-    max_response_time: 500ms
-    min_availability: 99.5%
+Este reto debe abordarse con **fundamentos de ingeniería del software**. Para ello, se debe seguir un enfoque sistemático en dos etapas:
+
+
+### 🧩 1. Modelar el pricing como artefacto ejecutable
+
+El primer paso es **transformar el pricing de un documento comercial estático** (normalmente redactado para el usuario final), **a un artefacto formal, "machine-oriented" y operable en tiempo de ejecución**.
+  
+Este artefacto se denomina **iPricing** (_intelligent pricing_) y permite que la aplicación entienda:
+
+- Qué planes existen y qué funciones habilita cada uno
+
+- Qué límites de uso se aplican
+
+- Qué add-ons pueden complementar a cada plan
+
+- Opciones de facturación
+
+- ...
+
+
+### 🏗️ 2. Diseñar una arquitectura que haga cumplir el iPricing en tiempo real
+
+Una vez tenemos el iPricing, hay que diseñar una arquitectura que permita a la CNA adaptarse dinámicamente a lo que este modelo define. Esta solución debe resolver cuatro desafíos esenciales:
+
+**1. Evaluación de acceso instantánea**
+
+> [!NOTE]
+> _¿Puede el usuario U acceder a la funcionalidad F?_
+
+
+Cualquier microservicio debe poder responder a esta pregunta en tiempo real mediante llamadas como:
+
+```ts
+isFeatureAvailable("my-feature", "userId")
 ```
 
-## SPHERE Technology
+Esta las condiciones detrás de esta decisión no se programarán manualmente, si no que han de inferirse del iPricing y del contrato del usuario.
 
-SPHERE (Self-adaPtive arcHitecture based on Economic-driven Reconfiguration Engine) is the architectural framework that complements SPACE. While SPACE focuses on the application-level adaptation logic, SPHERE provides the infrastructure and reconfiguration mechanisms.
 
-### SPHERE Features
+**2. Sincronización del estado de los contratos**
 
-- **Dynamic Resource Allocation**: Automatically adjusts computing resources based on demand and cost
-- **Service Selection**: Chooses between alternative service providers based on pricing and quality
-- **Architectural Reconfiguration**: Modifies system architecture to optimize cost-performance trade-offs
+El sistema debe conocer en todo momento cuánto está utilizando cada usuario sus funcionalidades (es decir, el estado de cada contrato), independientemente del servicio o microservicio que las gestione.
 
-## Experiment Guidelines
+Esto evita desincronizaciones que podrían permitir accesos indebidos o denegar accesos válidos.
 
-### For Students
 
-1. **Review Documentation**: Start by reading this README and familiarizing yourself with the concepts
-2. **Set Up Environment**: Follow the installation instructions
-3. **Run Base Experiments**: Execute the provided example scenarios
-4. **Design Your Experiments**: Create your own pricing models and adaptation strategies
-5. **Analyze Results**: Document your findings and insights
-6. **Report Issues**: Use the issue templates to ask questions or report problems
+**3. Seguridad**
 
-### Getting Help
+La información sobre permisos de acceso debe propagarse de forma segura entre todos los componentes de la CNA, incluido el frontend.
 
-If you encounter any issues or have questions during the experiment:
+> [!WARNING]
+> No puede ser manipulable por el usuario final ni por ataques intermedios, ya que eso permitiría activar funcionalidades no contratadas.
 
-1. Check the existing issues to see if your question has been answered
-2. Use the **Help Request** template for general questions about the experiment
-3. Use the **Bug Report** template if you encounter technical problems
-4. Tag your issues appropriately (SPACE, SPHERE, doubt, etc.)
 
-## Contributing
+**4. Cambios en tiempo real sin redespliegue**
 
-This is an educational repository for the FIS 25-26 course. Students should:
+Cuando el proveedor actualiza el pricing (por ejemplo, añade un nuevo add-on o cambia un límite de uso), la arquitectura debe:
 
-- Report issues using the provided templates
-- Ask questions tagged with `doubt`
-- Suggest improvements tagged with `enhancement`
-- Help identify bugs tagged with `bug`
+- Actualizar automáticamente el iPricing (idealmente guardando una copia de la versión del mismo que ha sido sustituída)
+    
+- Propagar el cambio a toda la aplicación **sin necesidad de realizar un nuevo despliegue**
 
-## Labels Reference
 
-- **SPACE**: Issues related to the SPACE framework
-- **SPHERE**: Issues related to the SPHERE architecture
-- **bug**: Something isn't working correctly
-- **enhancement**: Suggestions for new features or improvements
-- **documentation**: Improvements or additions to documentation
-- **doubt**: Questions about concepts, usage, or experiments
-- **duplicate**: This issue already exists
+## ✅ Criterios de éxito del alumno
 
-## Resources
+Para superar este módulo en la asignatura, tu proyecto deberá ser capaz de dar soporte a las siguientes historias de usuario (bien haciendo uso del ecosistema que ponemos a tu disposición, o a través de tu propia solución):
 
-Resources will be added as they become available:
-- Course materials and additional documentation
-- Research papers on pricing-driven self-adaptation
-- API documentation for SPACE and SPHERE
-- Video tutorials and walkthroughs
+- **Como** usuario **quiero** seleccionar cualquier subscripción válida disponible en el plan de precios **para** usar la configuración que mejor satisface mis necesidades y se alinea con mi presupuesto.
+- **Como** stackeholder de la CNA **quiero** modificar el pricing y que los cambios se apliquen automáticamente **para** mejorar la flexibilidad y capacidad de adaptación de la CNA.
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## 🧭  ¿Qué solución proponemos?
 
-## Contact
-
-For course-related questions, contact the teaching staff through the university platform.
-
-For technical issues with the repository, please open an issue using the appropriate template.
+TO BE WRITTEN
