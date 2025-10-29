@@ -178,14 +178,15 @@ This is an educational repository for the FIS 25-26 course. Students should:
 
 ## Resources
 
-- **Course Materials**: [Link to course website]
-- **Research Papers**: [Link to relevant publications]
-- **API Documentation**: [Link to API docs when available]
-- **Video Tutorials**: [Link to video content when available]
+Resources will be added as they become available:
+- Course materials and additional documentation
+- Research papers on pricing-driven self-adaptation
+- API documentation for SPACE and SPHERE
+- Video tutorials and walkthroughs
 
 ## License
 
-This project is licensed under the terms specified in the LICENSE file.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
