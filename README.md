@@ -156,7 +156,8 @@ El propósito de esta sección es mostraros **el proceso de precioficación**, 
 
 La siguiente figura ilustra el ciclo de vida definido por **pricing-driven DevOps**, que deberéis seguir siempre que queráis definir o modificar un plan de precios:
 
-IMAGEN
+![Pricing-driven DevOps](./images/pricing-driven-devops.png)
+
 ### 🧪 Ejemplo práctico: CCSIM
 
 Para ilustrar este proceso utilizaremos **CCSIM**, una aplicación real desarrollada por la Universidad de Extremadura y que ya se está comercializando. CCSIM es un SaaS que permite **probar infraestructuras del cloud continuum de forma virtual**, reduciendo el riesgo de realizar experimentos directamente sobre infraestructuras reales.
@@ -175,7 +176,7 @@ Como en cualquier proceso DevOps, el punto de partida es la **planificación**,
 
 Como resultado de esta fase, obtuvimos el siguiente plan de precios para CCSIM:
 
-IMAGEN
+![CCSIM Pricing Table](./images/CCSIM-Pricing.png)
 
 ### Fase 2: Transformación de pricing a iPricing
 
