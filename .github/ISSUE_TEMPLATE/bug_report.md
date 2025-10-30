@@ -1,5 +1,5 @@
 ---
-name: Bug Report
+name: Reportar un problema
 about: Reportar un problema técnico en SPHERE o en los materiales del proyecto
 title: '[BUG] '
 labels: 'bug'
