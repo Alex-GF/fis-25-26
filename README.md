@@ -16,9 +16,9 @@
         
 5. [✅ Criterios de éxito del alumno](#-criterios-de-%C3%A9xito-del-alumno)
     
-6. [🧭 ¿Qué solución proponemos?](#-qu%C3%A9-soluci%C3%B3n-proponemos)
+[🧭 ¿Qué solución proponemos?](#qué-solución-proponemos)
 
-7. [⚖️ Aviso Legal](#-aviso-legal)
+7. [⚖️ Aviso legal](#aviso-legal)
 
 
 ## 🧭 ¿Por qué existe este repositorio?
@@ -144,7 +144,7 @@ Para superar este módulo en la asignatura, tu proyecto deberá ser capaz de dar
 - **Como** stackeholder de la CNA **quiero** modificar el pricing y que los cambios se apliquen automáticamente **para** mejorar la flexibilidad y capacidad de adaptación de la CNA.
 
 
-## **🧭  ¿Qué solución proponemos?**
+## 🧭 ¿Qué solución proponemos?
 
 Como comentamos en la sección anterior, **no es obligatorio** utilizar la aproximación que estamos desarrollando en una de las líneas de investigación del grupo para superar la asignatura.  
 Sin embargo, creemos que incorporar nuestra tecnología puede facilitaros el proceso de implementación de las historias de usuario relacionadas con la autoadaptación y aportaros una ventaja significativa (dashboards, control de versiones para el plan de precios, etc).
@@ -503,7 +503,7 @@ A partir de ahí, el sistema se **autoadaptará automáticamente** para reflej
 Este proceso no solo os ayudará a cumplir con los requisitos de la asignatura, sino que también os permitirá **experimentar con un enfoque moderno y realista** del desarrollo de software como servicio.  
 Al finalizar, habréis aprendido a **diseñar, implementar y mantener** planes de precios inteligentes que guían la evolución de vuestras propias aplicaciones.
 
-## ⚖️ Aviso legal
+## ⚖️ Aviso legal
 
 El contenido de esta documentación ha sido **diseñado y redactado por el grupo de investigación ISA (Ingeniería del Software Aplicada)**, que posee **todos los derechos de copyright** sobre el mismo.
 
