@@ -1,80 +1,85 @@
 ---
 name: Bug Report
-about: Report a technical problem with SPACE or SPHERE
+about: Reportar un problema técnico en SPHERE o en los materiales del proyecto
 title: '[BUG] '
 labels: 'bug'
 assignees: ''
+---
+
+## 🧩 Descripción del error
+
+**Describe el error:**
+<!-- Explica de forma clara qué ocurre y cuál sería el comportamiento esperado -->
+
+**Componente afectado:**
+<!-- Marca el área donde ocurre el problema -->
+- [ ] SPHERE Editor
+- [ ] SPHERE Platform
+- [ ] SPACE Engine
+- [ ] Documentación / Tutorial
+- [ ] Laboratorio
+- [ ] Otro (especificar)
 
 ---
 
-## Bug Description
+## 🧭 Pasos para reproducirlo
 
-**Describe the bug:**
-<!-- A clear and concise description of what the bug is -->
+**Cómo reproducir el problema:**
+1. Ir a '...'
+2. Hacer clic en '...'
+3. Observar el comportamiento inesperado
 
-**Component:**
-<!-- Check the component where the bug occurs -->
-- [ ] SPACE framework
-- [ ] SPHERE architecture
-- [ ] Configuration system
-- [ ] Monitoring/Dashboard
-- [ ] Adaptation engine
-- [ ] Documentation
-- [ ] Other (please specify)
+**Comportamiento esperado:**
+<!-- Explica qué esperabas que sucediera -->
 
-## Steps to Reproduce
+**Comportamiento actual:**
+<!-- Explica qué está ocurriendo realmente -->
 
-**How to reproduce the behavior:**
-1. Go to '...'
-2. Configure '....'
-3. Run command '....'
-4. See error
+---
 
-**Expected behavior:**
-<!-- A clear and concise description of what you expected to happen -->
+## 💻 Entorno
 
-**Actual behavior:**
-<!-- What actually happened -->
+**Información del sistema:**
+- OS: [e.g., Windows 11, macOS 14, Ubuntu 22.04]
+- Navegador / Versión: [e.g., Chrome 129, Firefox 121]
+- Versión de Node.js / Deno (si aplica): [e.g., Node 22.4.0]
+- Proyecto: [e.g., CCSIM, vuestro SaaS, práctica X]
 
-## Environment
-
-**System Information:**
-- OS: [e.g., Ubuntu 20.04, Windows 10, macOS 12]
-- Java Version: [e.g., OpenJDK 11.0.12]
-- Maven Version: [e.g., 3.8.1]
-- Application Version/Commit: [e.g., v1.0.0 or commit SHA]
-
-**Configuration:**
-<!-- Include relevant parts of your configuration file -->
+**Configuración relevante:**
 ```yaml
-# Paste relevant configuration here
+# Incluye aquí fragmentos de tu archivo YAML o configuración
 ```
 
-## Logs and Error Messages
+---
 
-**Error output:**
+## 🧾 Logs y mensajes de error
+
+**Salida del error:**
 ```
-# Paste error messages or stack traces here
+# Pega aquí el mensaje de error o traza de consola
 ```
 
 **Logs:**
-<!-- Attach relevant log files or paste important log entries -->
+<!-- Adjunta o pega aquí los logs relevantes -->
 
-## Screenshots
+---
 
-<!-- If applicable, add screenshots to help explain your problem -->
+## 🖼️ Capturas
 
-## Additional Context
+<!-- Si aplica, añade capturas de pantalla o vídeos para mostrar el problema -->
 
-**Workarounds:**
-<!-- Have you found any temporary workarounds? -->
+---
 
-**Frequency:**
-<!-- Does this happen always, sometimes, or rarely? -->
+## ⚙️ Información adicional
 
-**Additional information:**
-<!-- Add any other context about the problem here -->
+**¿Has encontrado una solución temporal?**
+<!-- Describe cualquier workaround si existe -->
 
-## Possible Solution
+**Frecuencia:**
+<!-- ¿Ocurre siempre, a veces o solo en ciertas condiciones? -->
 
-<!-- If you have ideas about what might be causing the issue or how to fix it, please share -->
+**Comentarios adicionales:**
+<!-- Añade cualquier información que pueda ayudarnos a entender mejor el problema -->
+
+**Posible causa o solución:**
+<!-- Si tienes alguna hipótesis o idea sobre cómo resolverlo, inclúyela aquí -->

@@ -1,41 +1,42 @@
 ---
-name: Help Request
-about: Ask questions about the experiment, SPACE, or SPHERE technology
-title: '[HELP] '
-labels: 'doubt'
+name: Pregunta
+about: Plantear una duda o pedir aclaraciones sobre la práctica o el proceso de precioficación
+title: '[PREGUNTA]'
+labels: 'pregunta'
 assignees: ''
+---
+
+## ❓ Descripción de la duda
+
+**Tu pregunta:**
+<!-- Explica claramente cuál es tu duda o en qué necesitas ayuda -->
+
+**Tema o fase relacionada:**
+<!-- Indica a qué parte de la práctica o documentación se refiere -->
+- [ ] Fase 1: Diseño del plan de precios
+- [ ] Fase 2: Transformación a iPricing
+- [ ] Fase 3: Subida a SPHERE
+- [ ] Fase 4: Integración con SPACE
+- [ ] Fase 5: Mantenimiento del pricing
+- [ ] Otro (especificar)
 
 ---
 
-## Question
+## 📄 Contexto adicional
 
-**What do you need help with?**
-<!-- Provide a clear and concise description of what you need help understanding -->
+**¿Qué has intentado hasta ahora?**
+<!-- Explica brevemente qué has probado o investigado por tu cuenta -->
 
-## Context
+**Ejemplo o fragmento de código (si aplica):**
+```yaml
+# Añade aquí el fragmento relevante de tu código o YAML
+```
 
-**Related to:**
-<!-- Check all that apply -->
-- [ ] SPACE framework
-- [ ] SPHERE architecture
-- [ ] Pricing models
-- [ ] Self-adaptation concepts
-- [ ] Experiment setup
-- [ ] Configuration
-- [ ] Running the application
-- [ ] Analyzing results
-- [ ] Other (please specify)
+**Capturas o enlaces:**
+<!-- Si aplica, añade capturas o enlaces a la parte de la documentación o al error -->
 
-**What have you already tried?**
-<!-- Describe what you've attempted so far -->
+---
 
-## Additional Information
+## 💡 Comentarios adicionales
 
-**Relevant documentation:**
-<!-- Link to any documentation you've consulted -->
-
-**Screenshots or examples:**
-<!-- If applicable, add screenshots or code examples to help explain your question -->
-
-**Additional context:**
-<!-- Add any other context about the problem here -->
+<!-- Cualquier información extra que pueda ayudar a entender tu duda o problema -->
