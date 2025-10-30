@@ -18,7 +18,7 @@
     
 6. [🧭 ¿Qué solución proponemos?](#-qué-solución-proponemos)
 
-7. [⚖️ Aviso legal](#aviso-legal)
+7. [⚖️ Aviso legal](#-aviso-legal)
 
 
 ## 🧭 ¿Por qué existe este repositorio?
