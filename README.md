@@ -16,7 +16,7 @@
         
 5. [✅ Criterios de éxito del alumno](#-criterios-de-%C3%A9xito-del-alumno)
     
-[🧭 ¿Qué solución proponemos?](#qué-solución-proponemos)
+6. [🧭 ¿Qué solución proponemos?](#-qué-solución-proponemos)
 
 7. [⚖️ Aviso legal](#aviso-legal)
 
