@@ -3,7 +3,7 @@ name: Pregunta
 about: Plantear una duda o pedir aclaraciones sobre la práctica o el proceso de precioficación
 title: '[PREGUNTA] '
 labels: 'pregunta'
-assignees: ''
+assignees: 'Alex-GF'
 ---
 
 ## ❓ Descripción de la duda

@@ -3,7 +3,7 @@ name: Reportar un problema
 about: Reportar un problema técnico en SPHERE o en los materiales del proyecto
 title: '[BUG] '
 labels: 'bug'
-assignees: ''
+assignees: 'Alex-GF'
 ---
 
 ## 🧩 Descripción del error
