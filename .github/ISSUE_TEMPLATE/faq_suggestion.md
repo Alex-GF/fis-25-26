@@ -3,7 +3,7 @@ name: Sugerencia de FAQ
 about: Propón una nueva entrada de Preguntas Frecuentes basada en un problema que hayas resuelto
 title: '[FAQ] '
 labels: ['mejora', 'documentación']
-assignees: ''
+assignees: 'Alex-GF'
 ---
 
 ## 📝 Propuesta de FAQ
